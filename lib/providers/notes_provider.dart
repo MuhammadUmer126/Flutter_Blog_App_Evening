@@ -1,7 +1,5 @@
-import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class NotesProvider extends ChangeNotifier {
   List<Map> notes = [];
@@ -23,19 +21,4 @@ class NotesProvider extends ChangeNotifier {
     // saveDataToSharedPrefrences();
     notifyListeners();
   }
-
-  // Future<void> initSharedPrefrencesData() async {
-  //   SharedPreferences preferences = await SharedPreferences.getInstance();
-  //   String? decodedData = preferences.getString("notes");
-
-  //   if (decodedData != null) {
-  //     notes = List<Map>.from(json.decode(decodedData));
-  //   }
-  // }
-
-  // Future<void> saveDataToSharedPrefrences() async {
-  //   SharedPreferences preferences = await SharedPreferences.getInstance();
-  //   String jsonData = json.encode(notes);
-  //   preferences.setString("notes", jsonData);
-  // }
 }
